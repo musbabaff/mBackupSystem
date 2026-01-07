@@ -1,165 +1,75 @@
 <div align="center">
 
-# 🌊 kBackupSystem
+# 🌊 mBackupSystem
 
-**An efficient, secure, and fully automatic backup system for Minecraft worlds**
-**kBackupSystem is a high-performance plugin for automatic and manual backup of Minecraft worlds, designed for minimal server load and complete data preservation.**
+**An efficient, secure, and fully automatic backup system for Minecraft worlds.**
+**mBackupSystem is a high-performance plugin designed for automatic and manual backups with minimal server impact and complete data integrity.**
 
-[![Latest Release](https://img.shields.io/github/v/release/ImFriendlyy/kBackupSystem?style=for-the-badge&logo=github&label=Release)](https://github.com/ImFriendlyy/kBackupSystem/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/ImFriendlyy/kBackupSystem/total?style=for-the-badge&logo=github&label=Downloads)](https://github.com/ImFriendlyy/kBackupSystem/releases)
+[![Latest Release](https://img.shields.io/github/v/release/musbabaff/mBackupSystem?style=for-the-badge&logo=github&label=Release)](https://github.com/musbabaff/mBackupSystem/releases/latest)
 [![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=for-the-badge)](LICENSE)
-
-[![Minecraft](https://img.shields.io/badge/Minecraft-1.16+-green?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
-[![Spigot](https://img.shields.io/badge/Paper-1.16+-blue?style=for-the-badge)](https://papermc.io/)
-[![Paper](https://img.shields.io/badge/Paper-1.16+-blue?style=for-the-badge)](https://papermc.io/)
 [![Java](https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=openjdk&logoColor=white)](https://adoptium.net/)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.16+-green?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
 
 ---
 
-**[📥 Download](https://github.com/ImFriendlyy/kBackupSystem/releases/latest)** • 
-**[🐛 Bug-report](https://github.com/ImFriendlyy/kBackupSystem/issues)** • 
+**[📥 Download](https://github.com/musbabaff/mBackupSystem/releases/latest)** • 
+**[🐛 Bug Report](https://github.com/musbabaff/mBackupSystem/issues)** • 
 **[💬 Support](https://t.me/kapybarkaaa)**
 
 </div>
 
 ---
 
-<table>
-<tr>
-<td width="50%">
-
- 
-### 📌 Main idea
-The plugin allows you to:
-- Automatically archive worlds at specified intervals
-- Save backups when starting and stopping the server
-- Delete old backups older than a specified number of days
-- Make manual backups on command
-- Flexibly configure the archive storage directory
-- Create ZIP archives at high speed with detailed debug logging
-- Multi-language support (Russian and English)
-
-</td>
-<td width="50%">
-
-### 🏆 Why is kBackupSystem better than others?
-- Does not block the main thread
-- Supports multi-world servers
-- Has an auto-deletion system
-- Correctly archives empty directories
-- Has detailed and accurate debugging
-- Structured and easily modifiable code
-- Supports backup on startup, shutdown, and on schedule
-- Ability to perform manual backups
-- Multi-language support: Russian and English
-
-</td>
-</tr>
-</table>
+## 📌 Key Features
+* **Asynchronous Operations:** Backup processes run independently of the main server thread, preventing lag and TPS drops.
+* **Smart Scheduler:** Automatically backs up at specified intervals, on server startup, or during shutdown.
+* **Auto-Cleanup:** Automatically deletes backups older than a configured number of days to save disk space.
+* **Full Data Integrity:** Accurately archives entire world structures, including empty directories and critical files like `session.lock`.
+* **Multi-Language Support:** Full support for English (en), Turkish (tr), and Russian (ru).
 
 ---
 
-## 🚀 Plugin advantages1
- 1. Minimal load on the server
-
-All archiving is performed asynchronously, which eliminates lag and freezes of the main server tick.
-
- 2. Correct archiving of the entire world folder
-
-The plugin saves:
-
-- the root folder of the world
-- all files and subfolders
-- empty directories
-- the correct ZIP structure
-- This is important for transfers and emergency recoveries.
+## 🏆 Why Choose mBackupSystem?
+| Feature | Description |
+| :--- | :--- |
+| **Performance** | High-speed ZIP creation using optimized 16K buffers. |
+| **Flexibility** | Choose between storing backups in the server root or the plugin folder. |
+| **Reliability** | Comprehensive debug logging for tracking every action and error. |
+| **Simplicity** | Easy-to-use commands and a well-structured configuration file. |
 
 ---
 
-## 🧠 3. Smart task system
-
-The built-in scheduler allows you to perform backups:
-
-- automatically after N minutes
-- when the server starts
-- when the server stops
-
----
-
-## 🧹 4. Automatic deletion of old backups
-
-The plugin automatically clears backups older than the specified number of days.
-
----
-
-## 📁 5. Two storage modes
-
-- Main-folder — in the server root
-
-- Plugin-folder — in the plugin folder
-
----
-
-## 🧪 6. Detailed debug logging
-
-When debug: true, the plugin outputs:
-
-- which files are being archived
-- start/end time
-- archive size and path
-- world information
-- directories, files, exceptions
-
----
-
-## 🔧 7. Easy integration and customization
-
-Each method is structured, divided by managers, and called with a single command.
-
----
-
-
-## ⚡ 8. High ZIP speed
-
-Optimized buffers (up to 16K) are used, which speeds up the archiving of large worlds.
-
----
-
-## ⚙️ Configuration
-
-The plugin is configured via the `config.yml` file in the plugin folder:
+## ⚙️ Configuration (config.yml)
 
 ```yaml
-# Plugin language: ru (Russian) or en (English)
-language: ru
+# Language options: en (English), tr (Turkish), ru (Russian)
+language: en
 
-# Detailed logging (true/false)
+# Enable detailed logging
 debug: true
 
-# List of worlds for backup
+# List of worlds to back up
 world-list:
   - "world"
   - "world_nether"
   - "world_the_end"
 
-# Backup storage type
-# Main-folder - in the server root folder
-# Plugin-folder - in the plugin folder
+# Storage type: Main-folder (root) or Plugin-folder
 backup-type: Main-folder
 
-# Automatic backup scheduling
+# Automated backup interval (in minutes)
 task-manager:
   enabled: true
-  time: 60  # interval in minutes
+  time: 60
 
-# Backup on plugin start/stop
+# Lifecycle backups
 backup-in-start: true
 backup-in-stop: true
 
-# Automatic deletion of old backups
+# Auto-cleanup (in days)
 delete-old-backups:
   enabled: true
-  max-backup-age: 7  # maximum age in days
+  max-backup-age: 7
 ```
 
 ## 🛠 Commands
@@ -167,8 +77,8 @@ delete-old-backups:
 
 | Command                  | Description                                      | Permissions               |
 |----------------- ---------|-----------------------------------------------|-------------------- -|
-| `/kbackupsystem reload`     | Reload plugin                           | `kbackupsystem.admin`   |
-| `/kbackupsystem start`      | Force backup start                                 | `kbackupsystem.admin`   |
+| `/mbackupsystem reload`     | Reload plugin                           | `mbackupsystem.admin`   |
+| `/mbackupsystem start`      | Force backup start                                 | `mbackupsystem.admin`   |
 
 
 ---
@@ -186,3 +96,4 @@ world_2025-01-01_14-03-29.zip
     ├── data/
     ├── playerdata/
     └── session.lock
+<div align="center"> Developed with ❤️ for the Minecraft Community by musbabaff. </div>
