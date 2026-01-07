@@ -5,16 +5,11 @@
 **An efficient, secure, and fully automatic backup system for Minecraft worlds.**
 **mBackupSystem is a high-performance plugin designed for automatic and manual backups with minimal server impact and complete data integrity.**
 
-[![Latest Release](https://img.shields.io/github/v/release/musbabaff/mBackupSystem?style=for-the-badge&logo=github&label=Release)](https://github.com/musbabaff/mBackupSystem/releases/latest)
-[![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=for-the-badge)](LICENSE)
-[![Java](https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=openjdk&logoColor=white)](https://adoptium.net/)
-[![Minecraft](https://img.shields.io/badge/Minecraft-1.16+-green?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
-
 ---
 
 **[📥 Download](https://github.com/musbabaff/mBackupSystem/releases/latest)** • 
 **[🐛 Bug Report](https://github.com/musbabaff/mBackupSystem/issues)** • 
-**[💬 Support](https://t.me/kapybarkaaa)**
+**[💬 Support](https://musbabaff.com)**
 
 </div>
 
