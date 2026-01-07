@@ -1,0 +1,62 @@
+# Russian language file for mBackupSystem
+# Файл русского языка для mBackupSystem
+
+# Command messages
+command.usage: "&cИспользование: /mBackupSystem <reload|start>"
+command.reload.initiated: "| Перезагрузка плагина..."
+command.start.initiated: "| Запуск принудительного бэкапа всех миров из списка..."
+
+# Plugin lifecycle messages
+plugin.loading.configuration: "| Настройка директории бэкапов..."
+plugin.loaded.backup_started: "| Плагин загружен. Начат бэкап миров..."
+plugin.tasks.started: "| Запуск задач..."
+plugin.shutdown.backup_started: "| ⚠ Сервер завершается. Запуск бэкапа миров..."
+plugin.command.not_found: "Команда 'mBackupSystem' не найдена в plugin.yml!"
+
+# Configuration errors
+config.error.loading: "ОШИБКА ЗАГРУЗКИ КОНФИГУРАЦИИ! Выключение плагина..."
+config.error.enabling: "ОШИБКА ВКЛЮЧЕНИЯ ПЛАГИНА! Выключение плагина..."
+
+# Backup task messages
+backup.task.started: "| [BackupScheduler] Задача начата: {time} min."
+
+# Backup directory setup
+backup.dir.using_main: "| Используется корневая директория /backups/"
+backup.dir.using_plugin: "| Используется локальная директория плагина /backups/"
+backup.dir.created: "| ✅ Папка создана: {path}"
+backup.dir.failed: "| ❌ Не удалось создать папку: {path}"
+backup.dir.init_error: "| ❌ Ошибка инициализации BackupManager: {error}"
+
+# Backup process messages
+backup.worlds.list_empty: "| ❌ Список миров пуст или не найден в конфиге!"
+backup.worlds.started: "| Запуск последовательного бэкапа миров..."
+backup.worlds.completed: "| ✅ Все бэкапы миров завершены!"
+backup.world.separator: "| -----------------------------"
+backup.world.started: "| Начат бэкап мира: {world}"
+backup.world.folder_not_found: "| ❌ Папка мира не найдена: {path}"
+backup.world.archive_error: "| ❌ Ошибка при создании архива"
+backup.world.completed: "| ✅ Бэкап создан: {archive} ({duration} ms)"
+backup.world.error: "| ❌ Ошибка при создании бэкапа: {error}"
+
+# Archive creation messages
+archive.creation.error: "| ❌ Ошибка создания архива: {error}"
+
+# Delete old backups messages
+delete.folder_not_found: "| ❌ Папка backups не найдена. Очистка невозможна."
+delete.no_archives: "| Нет архивов для проверки."
+delete.started: "| Очистка бэкапов старше {days} дней..."
+delete.file_deleted: "| 🗑 Удалён старый бэкап: {file}"
+delete.file_failed: "| ❌ Не удалось удалить: {file}"
+delete.completed: "| Очистка завершена."
+
+# Debug messages
+debug.backup_dir: "| [DEBUG] backupDir = {path}"
+debug.worlds_count: "| [DEBUG] Миров в списке: {count}"
+debug.world_index: "| [DEBUG] Индекс мира: {index}"
+debug.world_processed: "| [DEBUG] Мир {world} успешно обработан"
+debug.backup_start: "| [DEBUG] Запуск создания бэкапа мира: {world}"
+debug.world_folder: "| [DEBUG] Папка мира: {path}"
+debug.archive_creating: "| [DEBUG] Создание ZIP архива: {path}"
+debug.folder_info: "| [DEBUG] Папка: {path} ({count} файлов)"
+debug.file_info: "| [DEBUG] Файл: {entry} (размер={size} байт)"
+debug.delete_checking: "| [DEBUG] Проверка: {file} | Возраст: {age} дней"

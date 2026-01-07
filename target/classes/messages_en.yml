@@ -1,0 +1,61 @@
+# English language file for mBackupSystem
+
+# Command messages
+command.usage: "&cUsage: /mBackupSystem <reload|start>"
+command.reload.initiated: "| Reloading plugin..."
+command.start.initiated: "| Starting forced backup of all worlds from the list..."
+
+# Plugin lifecycle messages
+plugin.loading.configuration: "| Setting up backup directory..."
+plugin.loaded.backup_started: "| Plugin loaded. Started world backup..."
+plugin.tasks.started: "| Starting tasks..."
+plugin.shutdown.backup_started: "| ⚠ Server is shutting down. Starting world backup..."
+plugin.command.not_found: "Command 'mBackupSystem' not found in plugin.yml!"
+
+# Configuration errors
+config.error.loading: "CONFIGURATION LOADING ERROR! Disabling plugin..."
+config.error.enabling: "PLUGIN ENABLING ERROR! Disabling plugin..."
+
+# Backup task messages
+backup.task.started: "| [BackupScheduler] Task started: {time} min."
+
+# Backup directory setup
+backup.dir.using_main: "| Using root directory /backups/"
+backup.dir.using_plugin: "| Using plugin local directory /backups/"
+backup.dir.created: "| ✅ Folder created: {path}"
+backup.dir.failed: "| ❌ Failed to create folder: {path}"
+backup.dir.init_error: "| ❌ BackupManager initialization error: {error}"
+
+# Backup process messages
+backup.worlds.list_empty: "| ❌ World list is empty or not found in config!"
+backup.worlds.started: "| Starting sequential world backup..."
+backup.worlds.completed: "| ✅ All world backups completed!"
+backup.world.separator: "| -----------------------------"
+backup.world.started: "| Started backup of world: {world}"
+backup.world.folder_not_found: "| ❌ World folder not found: {path}"
+backup.world.archive_error: "| ❌ Error creating archive"
+backup.world.completed: "| ✅ Backup created: {archive} ({duration} ms)"
+backup.world.error: "| ❌ Error creating backup: {error}"
+
+# Archive creation messages
+archive.creation.error: "| ❌ Archive creation error: {error}"
+
+# Delete old backups messages
+delete.folder_not_found: "| ❌ Backups folder not found. Cleanup impossible."
+delete.no_archives: "| No archives to check."
+delete.started: "| Cleaning backups older than {days} days..."
+delete.file_deleted: "| 🗑 Deleted old backup: {file}"
+delete.file_failed: "| ❌ Failed to delete: {file}"
+delete.completed: "| Cleanup completed."
+
+# Debug messages
+debug.backup_dir: "| [DEBUG] backupDir = {path}"
+debug.worlds_count: "| [DEBUG] Worlds in list: {count}"
+debug.world_index: "| [DEBUG] World index: {index}"
+debug.world_processed: "| [DEBUG] World {world} successfully processed"
+debug.backup_start: "| [DEBUG] Starting backup creation for world: {world}"
+debug.world_folder: "| [DEBUG] World folder: {path}"
+debug.archive_creating: "| [DEBUG] Creating ZIP archive: {path}"
+debug.folder_info: "| [DEBUG] Folder: {path} ({count} files)"
+debug.file_info: "| [DEBUG] File: {entry} (size={size} bytes)"
+debug.delete_checking: "| [DEBUG] Checking: {file} | Age: {age} days"

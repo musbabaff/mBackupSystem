@@ -1,0 +1,18 @@
+name: mBackupSystem
+version: '1.0'
+main: blockstock.plugin.mBackupSystem.mBackupSystem
+api-version: '1.16'
+load: STARTUP
+authors: [ musbabaff ]
+website: musbabaff.com
+commands:
+  mbackupsystem:
+    description: Main management command for mBackupSystem
+    usage: /mbackupsystem <reload|start>
+    permission: mbackupsystem.admin
+    aliases:
+      - mbs
+      - backupsys
+      - backupsystem
+      - backup
+      - bs

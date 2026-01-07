@@ -1,0 +1,36 @@
+# kBackupSystem - Configuration File
+
+# Language: en (English), ru (Russian), or tr (Turkish)
+language: en
+
+# Debug Mode: Set to true for detailed console logs
+debug: true
+
+# List of worlds to be backed up
+world-list:
+  - "world"
+  - "world_nether"
+  - "world_the_end"
+
+# Backup Storage Location:
+# Main-folder   -> Uses /backups/ in the server root directory
+# Plugin-folder -> Uses /backups/ in the kBackupSystem plugin folder
+backup-type: Main-folder
+
+# Automated Backup Task
+task-manager:
+  enabled: true
+  # Interval in minutes
+  time: 60
+
+# Lifecycle Backups
+# Create a backup when the plugin/server starts
+backup-in-start: true
+# Create a backup when the plugin/server stops
+backup-in-stop: true
+
+# Cleanup Settings
+delete-old-backups:
+  enabled: true
+  # Maximum age of backups to keep (in days)
+  max-backup-age: 7

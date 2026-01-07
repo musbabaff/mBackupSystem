@@ -1,0 +1,61 @@
+# mBackupSystem için Türkçe dil dosyası
+
+# Komut mesajları
+command.usage: "&cKullanım: /mBackupSystem <reload|start>"
+command.reload.initiated: "| Eklenti yenileniyor..."
+command.start.initiated: "| Listedeki tüm dünyaların zorunlu yedeği başlatılıyor..."
+
+# Eklenti yaşam döngüsü mesajları
+plugin.loading.configuration: "| Yedekleme dizini ayarlanıyor..."
+plugin.loaded.backup_started: "| Eklenti yüklendi. Dünya yedeklemesi başlatıldı..."
+plugin.tasks.started: "| Görevler başlatılıyor..."
+plugin.shutdown.backup_started: "| ⚠ Sunucu kapanıyor. Dünya yedeklemesi başlatılıyor..."
+plugin.command.not_found: "plugin.yml dosyasında 'mBackupSystem' komutu bulunamadı!"
+
+# Yapılandırma hataları
+config.error.loading: "YAPILANDIRMA YÜKLEME HATASI! Eklenti devre dışı bırakılıyor..."
+config.error.enabling: "EKLENTİ AKTİFLEŞTİRME HATASI! Eklenti devre dışı bırakılıyor..."
+
+# Yedekleme görev mesajları
+backup.task.started: "| [YedeklemeZamanlayıcısı] Görev başlatıldı: {time} dak."
+
+# Yedekleme dizini kurulumu
+backup.dir.using_main: "| Kök dizin kullanılıyor: /backups/"
+backup.dir.using_plugin: "| Eklenti yerel dizini kullanılıyor: /backups/"
+backup.dir.created: "| ✅ Klasör oluşturuldu: {path}"
+backup.dir.failed: "| ❌ Klasör oluşturulamadı: {path}"
+backup.dir.init_error: "| ❌ BackupManager başlatma hatası: {error}"
+
+# Yedekleme süreci mesajları
+backup.worlds.list_empty: "| ❌ Dünya listesi boş veya yapılandırmada bulunamadı!"
+backup.worlds.started: "| Sıralı dünya yedeklemesi başlatılıyor..."
+backup.worlds.completed: "| ✅ Tüm dünya yedeklemeleri tamamlandı!"
+backup.world.separator: "| -----------------------------"
+backup.world.started: "| Dünya yedeklemesi başladı: {world}"
+backup.world.folder_not_found: "| ❌ Dünya klasörü bulunamadı: {path}"
+backup.world.archive_error: "| ❌ Arşiv oluşturma hatası"
+backup.world.completed: "| ✅ Yedek oluşturuldu: {archive} ({duration} ms)"
+backup.world.error: "| ❌ Yedek oluşturma hatası: {error}"
+
+# Arşiv oluşturma mesajları
+archive.creation.error: "| ❌ Arşiv oluşturma hatası: {error}"
+
+# Eski yedekleri silme mesajları
+delete.folder_not_found: "| ❌ Yedekleme klasörü bulunamadı. Temizlik yapılamıyor."
+delete.no_archives: "| Kontrol edilecek arşiv yok."
+delete.started: "| {days} günden eski yedekler temizleniyor..."
+delete.file_deleted: "| 🗑 Eski yedek silindi: {file}"
+delete.file_failed: "| ❌ Silme işlemi başarısız: {file}"
+delete.completed: "| Temizlik tamamlandı."
+
+# Hata ayıklama (Debug) mesajları
+debug.backup_dir: "| [HATA AYIKLAMA] backupDir = {path}"
+debug.worlds_count: "| [HATA AYIKLAMA] Listedeki dünyalar: {count}"
+debug.world_index: "| [HATA AYIKLAMA] Dünya dizini: {index}"
+debug.world_processed: "| [HATA AYIKLAMA] {world} dünyası başarıyla işlendi"
+debug.backup_start: "| [HATA AYIKLAMA] Dünya için yedekleme başlatılıyor: {world}"
+debug.world_folder: "| [HATA AYIKLAMA] Dünya klasörü: {path}"
+debug.archive_creating: "| [HATA AYIKLAMA] ZIP arşivi oluşturuluyor: {path}"
+debug.folder_info: "| [HATA AYIKLAMA] Klasör: {path} ({count} dosya)"
+debug.file_info: "| [HATA AYIKLAMA] Dosya: {entry} (boyut={size} bayt)"
+debug.delete_checking: "| [HATA AYIKLAMA] Kontrol ediliyor: {file} | Yaş: {age} gün"

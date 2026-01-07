@@ -1,0 +1,8 @@
+blockstock\plugin\mBackupSystem\utils\Color\impl\LegacyColorizer.class
+blockstock\plugin\mBackupSystem\utils\ConfigManager.class
+blockstock\plugin\mBackupSystem\utils\BackupManager.class
+blockstock\plugin\mBackupSystem\KBSManager.class
+blockstock\plugin\mBackupSystem\utils\MessageManager.class
+blockstock\plugin\mBackupSystem\mBackupSystem.class
+blockstock\plugin\mBackupSystem\utils\Color\Colorizer.class
+blockstock\plugin\mBackupSystem\main\CommandManager.class
